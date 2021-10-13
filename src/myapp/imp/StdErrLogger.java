@@ -5,8 +5,15 @@ import java.util.Date;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
 import myapp.services.ILogger;
 
+@Service("stdErrLogger")
+@Primary
+@Qualifier("test")
 public class StdErrLogger implements ILogger {
 	
 	@PostConstruct

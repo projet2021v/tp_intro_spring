@@ -2,6 +2,7 @@ package myapp.tests;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -45,15 +46,15 @@ public class TestSpring {
 		}
 	}
 	
-	@Test
-	public void testCalculatorWithBeanFileLogger() {
-		System.err.println("+++ CalculatorWithBeanFileLogger");
-		String conf = "config.xml";
-		
-		try(AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(conf)) {
-			ICalculator calcBeanFile = ctx.getBean("calcBeanFile", ICalculator.class);
-			use(calcBeanFile);
-		}
-	}
+//	@Test
+//	public void testCalculatorWithBeanFileLogger() {
+//		System.err.println("+++ CalculatorWithBeanFileLogger");
+//		String conf = "config.xml";
+//		
+//		try(AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(conf)) {
+//			ICalculator calcBeanFile = ctx.getBean("calcBeanFile", ICalculator.class);
+//			use(calcBeanFile);
+//		}
+//	}
 		
 }
