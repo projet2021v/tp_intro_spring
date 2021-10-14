@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
 import myapp.services.ILogger;
 
 @Service
-@Qualifier("pt8logger")
-public class Pt8Logger implements ILogger {
+@Qualifier("pt8logger1")
+public class Pt8Logger1 implements ILogger {
 	
 	@PostConstruct
 	public void start() {
@@ -25,7 +25,7 @@ public class Pt8Logger implements ILogger {
 	}
 	
 	public void log(String message) {
-		System.err.printf("%tF %1$tR | %s\n", new Date(), message);
+		System.err.printf("-----LOGGER_1 (avec date)----- | %tF %1$tR | %s\n", new Date(), message);
 	}
 
 }
