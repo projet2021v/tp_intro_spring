@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import myapp.services.ICalculator;
 import myapp.services.ILogger;
 
-@Service("calcStdErr")
+@Service
 public class SimpleCalculator implements ICalculator {
 	
 	private ILogger logger;

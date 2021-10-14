@@ -6,14 +6,13 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import myapp.services.ILogger;
 
-@Service("stdErrLogger")
-@Primary
-public class StdErrLogger implements ILogger {
+@Service
+@Qualifier("pt8logger")
+public class Pt8Logger implements ILogger {
 	
 	@PostConstruct
 	public void start() {

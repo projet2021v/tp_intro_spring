@@ -9,8 +9,14 @@ import java.util.Date;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
 import myapp.services.ILogger;
 
+@Service("beanFileLogger")
+@Qualifier("test")
 public class BeanFileLogger implements ILogger {
 	
 	private String fileName = "resources/tmp/myappBEAN.log";
@@ -42,6 +48,7 @@ public class BeanFileLogger implements ILogger {
 	
 	public void log(String message) {
 		writer.printf("%tF %1$tR | %s\n", new Date(), message);
+		writer.close();
 	}
 
 	public String getFileName() {

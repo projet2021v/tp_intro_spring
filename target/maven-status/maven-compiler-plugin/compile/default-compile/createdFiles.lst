@@ -1,8 +1,8 @@
 myapp\imp\FileLogger.class
 myapp\imp\SimpleCalculator.class
-myapp\tests\TestLoggerServices.class
-myapp\tests\TestSpring.class
 myapp\services\ILogger.class
 myapp\imp\BeanFileLogger.class
+myapp\tests\TestLoggerServices.class
+myapp\tests\TestSpring.class
 myapp\services\ICalculator.class
 myapp\imp\StdErrLogger.class

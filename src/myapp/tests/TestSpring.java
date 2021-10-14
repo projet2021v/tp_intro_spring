@@ -46,15 +46,15 @@ public class TestSpring {
 		}
 	}
 	
-//	@Test
-//	public void testCalculatorWithBeanFileLogger() {
-//		System.err.println("+++ CalculatorWithBeanFileLogger");
-//		String conf = "config.xml";
-//		
-//		try(AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(conf)) {
-//			ICalculator calcBeanFile = ctx.getBean("calcBeanFile", ICalculator.class);
-//			use(calcBeanFile);
-//		}
-//	}
+	@Test
+	public void testCalculatorWithBeanFileLogger() {
+		System.err.println("+++ CalculatorWithBeanFileLogger");
+		String conf = "config.xml";
+		
+		try(AbstractApplicationContext ctx = new ClassPathXmlApplicationContext(conf)) {
+			ICalculator calcBeanFile = ctx.getBean("calcBeanFile", ICalculator.class);
+			use(calcBeanFile);
+		}
+	}
 		
 }

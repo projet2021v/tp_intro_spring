@@ -32,6 +32,7 @@ public class FileLogger implements ILogger {
 	
 	public void log(String message) {
 		writer.printf("%tF %1$tR | %s\n", new Date(), message);
+		writer.close();
 	}
 
 }
