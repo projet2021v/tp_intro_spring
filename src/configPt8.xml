@@ -9,12 +9,6 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 	<!-- pour utiliser les annotations -->
 	<context:annotation-config />
 	
-	<bean class="myapp.imp.Pt8Logger1" />
-	
-	<bean class="myapp.imp.Pt8Logger2" />
-	
-	<bean class="myapp.imp.Pt8Calculator" />
-	
-	<bean class="myapp.imp.Pt8NouvelleImplantation"/>
+	<context:component-scan base-package="myapp.impPt8" />	
 
 </beans>

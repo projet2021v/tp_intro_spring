@@ -1,16 +1,14 @@
-package myapp.imp;
+package myapp.impPt8;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import myapp.services.ILogger;
+import myapp.services.ICalculator;
 
 @Service
-@Qualifier("pt8logger2")
-public class Pt8Logger2 implements ILogger {
+public class Pt8Calculator implements ICalculator {
 	
 	@PostConstruct
 	public void start() {
@@ -22,7 +20,10 @@ public class Pt8Logger2 implements ILogger {
 		System.err.println("Stop " + this);
 	}
 	
-	public void log(String message) {
-		System.err.printf("-----LOGGER_2 (sans date)----- | %s\n", message);
+
+	@Override
+	public double add(double a, double b) {
+		return (a + b);
 	}
+
 }

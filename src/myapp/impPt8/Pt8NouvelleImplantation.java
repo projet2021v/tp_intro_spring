@@ -1,11 +1,13 @@
-package myapp.imp;
+package myapp.impPt8;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import myapp.services.ICalculator;
 import myapp.services.ILogger;
 
+@Component
 public class Pt8NouvelleImplantation {
 	
 	@Autowired
